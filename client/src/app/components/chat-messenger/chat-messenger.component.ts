@@ -8,7 +8,7 @@ import { Message } from 'src/app/models/message';
   styleUrls: ['./chat-messenger.component.scss']
 })
 export class ChatMessengerComponent {
-  messageText: string;
+  messageInput: string;
   messages: Message[];
 
   constructor(private chatService: ChatService) {
@@ -20,7 +20,7 @@ export class ChatMessengerComponent {
   }
   sendMessage() {
     let senderId = 'senderId';
-    this.chatService.sendMsg(senderId, this.messageText);
+    this.chatService.sendMsg(senderId, this.messageInput);
   }
 
 }

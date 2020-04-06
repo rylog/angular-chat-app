@@ -1,14 +1,16 @@
 <div class="messenger-container">
-    <div class ="messenger-header">
+    <div class="messenger-header">
         <h1>Name</h1>
     </div>
     <div class="messenger-messages">
-        <div *ngFor = "let message of messages">
+        <div *ngFor="let message of messages">
             {{message.content}}
         </div>
     </div>
-    <div class ="messenger-input">
-        <input type="text" [(ngModel)]="messageText">
-        <button (click)="sendMessage('username')">Send</button>
+    <div class="messenger-input">
+        <form>
+            <input type="text" name="messageInput" [(ngModel)]="messageInput">
+            <button (click)="sendMessage('username')" type="submit">Send</button>
+        </form>
     </div>
 </div>

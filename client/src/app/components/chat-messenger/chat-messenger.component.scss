@@ -1,0 +1,20 @@
+.messenger-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute; 
+    top:0; 
+    left:0;
+    height:100%;
+    width:100%;
+}
+.messenger-header{
+    height:70px;
+    border:1px solid #ededed;
+}
+.messenger-messages{
+    flex: 1 1 auto;
+    height: auto;
+}
+.messenger-input{
+    height:60px;
+}

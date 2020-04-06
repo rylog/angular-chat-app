@@ -3,8 +3,8 @@
         <h1>Name</h1>
     </div>
     <div class="messenger-messages">
-        <div *ngFor="let message of messages">
-            {{message.content}}
+        <div *ngFor="let message of messages" class = "message-container">
+            <div class = "message">{{message.content}}</div>
         </div>
     </div>
     <div class="messenger-input">

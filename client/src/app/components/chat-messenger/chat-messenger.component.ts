@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../../services/chat.service';
-import { Message } from 'src/app/models/message';
+import { Message } from 'src/app/shared/models/message';
 
 @Component({
   selector: 'chat-messenger',
@@ -9,8 +9,9 @@ import { Message } from 'src/app/models/message';
 })
 export class ChatMessengerComponent {
   messageInput: string;
-  messages: Message[];
 
+  messages: Message[];
+  senderId = 'senderId';
   constructor(private chatService: ChatService) {
     this.messages = [];
     this.chatService.messages.subscribe(msg => {
@@ -19,8 +20,10 @@ export class ChatMessengerComponent {
     })
   }
   sendMessage() {
-    let senderId = 'senderId';
-    this.chatService.sendMsg(senderId, this.messageInput);
+    if (this.messageInput) {
+      this.chatService.sendMsg(this.senderId, this.messageInput);
+    }
+    this.messageInput = null;
   }
 
 }

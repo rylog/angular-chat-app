@@ -12,6 +12,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
     declarations: [
@@ -23,13 +26,16 @@ import { MatCardModule } from '@angular/material/card';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        
+
         ScrollingModule,
         ScrollbarViewportComponent,
 
         MatIconModule,
         MatButtonModule,
         MatCardModule,
+        MatExpansionModule,
+        MatDividerModule,
+        MatListModule,
     ],
 })
 export class SharedModule { }

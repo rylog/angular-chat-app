@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './chat-channels.component.html',
   styleUrls: ['./chat-channels.component.scss']
 })
-export class ChatChannelsComponent implements OnInit {
+export class ChatChannelsComponent {
+  channels:string[];
 
   constructor() { }
 
-  ngOnInit() {
+  addChannel(channel:string){
+    this.channels.push(channel);
   }
 
 }

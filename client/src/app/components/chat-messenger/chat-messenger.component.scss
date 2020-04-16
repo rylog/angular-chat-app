@@ -8,23 +8,19 @@
     height: 100%;
     width: 100%;
     background: #ffffff;
-    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-
 }
 .messenger-header{
     display: flex;
     height: 84px;
-    border-bottom: 1px solid #e7e7e7;
 }
 .messenger-header-name{
-    padding: 4px;
-    margin-left: 12px;
+    margin-left: 8px;
 }
 .messenger-messages-container{
     flex: 1;
     padding: 8px;
     overflow:hidden;
-    background-color: #fafafa;
+    background-color: #f5f5f5;
 }
 
 .messenger-input-container{
@@ -66,13 +62,12 @@
 }
 
 .sent{
- /*    background: #673ba4; */
-  /*   background:#8658bd; */
     background: #4a4a4a;
     color: white;
 }
 
 .received{
-    background:#0d47a1;
+    background:white;
 }
+
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChatService } from '../../services/chat.service';
+import { ChatService } from '../../services/chat/chat.service';
 import { Message } from 'src/app/shared/models/message';
 
 @Component({
@@ -9,9 +9,8 @@ import { Message } from 'src/app/shared/models/message';
 })
 export class ChatMessengerComponent {
   messageInput: string;
-
   messages: Message[];
-  senderId = 'senderId';
+  
   constructor(private chatService: ChatService) {
     this.messages = [];
     this.chatService.messages.subscribe(msg => {
@@ -21,7 +20,7 @@ export class ChatMessengerComponent {
   }
   sendMessage() {
     if (this.messageInput) {
-      this.chatService.sendMsg(this.senderId, this.messageInput);
+      this.chatService.sendMsg(this.messageInput);
     }
     this.messageInput = null;
   }

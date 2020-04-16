@@ -1,0 +1,12 @@
+<div class="icon-bar-container">
+    <div *ngFor="let icon of icons" class="icon-bar-item" (click)="selectIcon(icon)"  [class.selected]="selectedIcon === icon">
+        <button class="icon-button">
+            <mat-icon class="icon" [fontSet]=" selectedIcon === icon? null:'material-icons-outlined'">{{icon}}</mat-icon>
+        </button>
+    </div>
+    <div  class="icon-bar-item logout" >
+        <button class="icon-button">
+            <mat-icon class="icon" [fontSet]=" selectedIcon === icon? null:'material-icons-outlined'">exit_to_app</mat-icon>
+        </button>
+    </div>
+</div>

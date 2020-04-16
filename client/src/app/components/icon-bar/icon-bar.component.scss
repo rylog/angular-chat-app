@@ -1,0 +1,49 @@
+.icon-bar-container{
+    width: 120px;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+        -o-user-select: none;
+           user-select: none;
+}
+
+.icon-bar-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background: white;
+    outline: none;
+}
+.icon-bar-item:hover{
+    background: #ededed;
+}
+
+.icon-button{
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.icon{
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+}
+
+.selected{
+    background: #ddd;
+    border-right: 2px solid #4a4a4a
+}
+.selected:hover{
+    background: #ddd;
+}
+
+.logout{
+    margin-top:auto;
+}

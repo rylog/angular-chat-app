@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { WebsocketService } from './websocket.service'
+import { WebsocketService } from '../websocket/websocket.service'
 import { Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 @Injectable({
@@ -7,7 +7,8 @@ import { map } from 'rxjs/operators';
 })
 export class ChatService {
 
-  messages: Subject<any>
+  messages: Subject<any>;
+  senderId:string;
 
   constructor(private wsService: WebsocketService) {
     this.messages = <Subject<any>>this.wsService.connect()
@@ -16,7 +17,7 @@ export class ChatService {
     }))
   }
 
-  sendMsg(username:string, msg:string){
-    this.messages.next({senderId:username, content:msg});
+  sendMsg(msg:string){
+    this.messages.next({senderId:this.senderId, content:msg});
   }
 }

@@ -5,7 +5,7 @@
     <scrollbar-viewport class="messenger-messages-container">
             <div *ngFor="let message of messages" class="message-container"
                 [style.justify-content]="message.senderId === senderId ? 'flex-end' : null">
-                <mat-card class="message" [ngClass]="message.senderId === senderId ? 'sent' : 'received'">
+                <mat-card class="message" [ngClass]="message.senderId === chatService.senderId ? 'sent' : 'received'">
                     {{message.content}}</mat-card>
             </div>
     </scrollbar-viewport>

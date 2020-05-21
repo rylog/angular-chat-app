@@ -1,0 +1,26 @@
+<div class="messenger-container">
+    <div class="messenger-header">
+        <h1 class="messenger-header-name">General</h1>
+
+    </div>
+    <scrollbar-viewport class="messenger-messages-container">
+        <div *ngFor="let message of messages" class="message-container"
+            [style.justify-content]="message.senderId === chatService.senderId ? 'flex-end' : null">
+            <mat-card class="message" [ngClass]="message.senderId === chatService.senderId ? 'sent' : 'received'">
+                {{message.content}}</mat-card>
+        </div>
+    </scrollbar-viewport>
+    <div class="messenger-input-container">
+        <form class=messenger-input-form>
+            <button mat-icon-button type="button" matTooltip="Add a photo" matTooltipPosition="above">
+                <input type="file" style="display: none" #file (change)="addFile($event)" />
+                <mat-icon class="attach-file-icon" (click)="file.click()">attach_file</mat-icon>
+            </button>
+            <input class="messenger-input-text" autocomplete="off" type="text" name="messageInput"
+                [(ngModel)]="messageInput" placeholder="Type a message..." multiple>
+            <button mat-icon-button class="messenger-input-send" (click)="sendMessage()" type="submit">
+                <mat-icon fontSet="material-icons-round">send</mat-icon>
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div *ngIf ="chatService.senderId" class="chat-user-container">
+    <div class="chat-user-wrapper">
+        <img class="profile-image" *ngIf="chatService.profileImage" [src]="chatService.profileImage" height="42px"
+            width="42px">
+        <p class = "username">{{chatService.senderId}}</p>
+    </div>
+</div>

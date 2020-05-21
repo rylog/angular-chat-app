@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 *{
-    font-family: 'Segoe UI', 'Roboto',sans-serif;
+    font-family: 'Quicksand','Segoe UI', 'Roboto',sans-serif;
     font-weight: lighter;
     box-sizing: border-box;
   
@@ -14,4 +14,8 @@ body{
 .mat-expansion-panel {
     border-radius: 0 !important;
     background: none;
+}
+
+.mat-tooltip-handset, .mat-tooltip{
+    margin: 4px !important;
 }

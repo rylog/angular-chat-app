@@ -1,0 +1,38 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-photo-button{
+    align-self: center;
+    height: 84px;
+    width: 84px;
+    position: relative;
+}
+
+.profile-icon{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background:#ff4081;
+    border-radius: 50%;
+    font-size:32px;
+    color:#ffffff
+}
+
+.camera-button{
+    position: absolute;
+    bottom: -4px;
+    right: -8px;
+    background: #4a4a4a;
+}
+
+.img-preview-container{
+    border-radius: 50%;
+    height: 84px;
+    width: 84px;
+    overflow: hidden;
+    border:1px solid #ccc
+}

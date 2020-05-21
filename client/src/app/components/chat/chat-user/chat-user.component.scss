@@ -1,0 +1,24 @@
+.chat-user-container{
+    display: flex;
+    flex:1;
+}
+
+.chat-user-wrapper{
+    display: flex;
+    flex:1;
+    background: #efefef;
+    padding:8px;
+    height:76px;
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    align-items:center;
+}
+
+.profile-image{
+    border-radius:50%;
+}
+
+.username{
+    margin-left:4px;
+}
+

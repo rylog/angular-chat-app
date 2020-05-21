@@ -1,0 +1,26 @@
+<div class="modal-wrapper">
+    <form [formGroup]="userForm" (submit)="onSubmit()">
+        <h2 class="modal-header">Get Started</h2>
+        <div type="button" mat-fab class="user-photo-button" type="button">
+            <mat-icon *ngIf = "!uploadedImage" [inline]="true" class="profile-icon">person_outline</mat-icon>
+            <div *ngIf ="uploadedImage" class ="img-preview-container">
+                <img  [src]="uploadedImage"  height="84" width="84">
+            </div>
+            <input type="file" style="display: none" #file (change)="fileChange($event)" accept="image/*" />
+        
+            <button mat-mini-fab type="button" matTooltip="Add a photo" matTooltipPosition = "right" class="camera-button" (click)="file.click()">
+                <mat-icon>camera_alt</mat-icon>
+            </button>
+        </div>
+        <br>
+        <div class="form-field-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Please enter name</mat-label>
+                <input matInput formControlName='name'>
+            </mat-form-field>
+        </div>
+        <div style="display:flex; justify-content: flex-end;">
+            <button mat-button type="submit" [disabled] = "!userForm.valid">Connect</button>
+        </div>
+    </form>
+</div>

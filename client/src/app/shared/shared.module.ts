@@ -9,12 +9,16 @@ import { ScrollbarViewportComponent } from './scrollbar-viewport/scrollbar-viewp
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
-import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from "@angular/material/icon";
+import { MatInputModule } from "@angular/material/input";
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+
 
 @NgModule({
     declarations: [
@@ -30,12 +34,14 @@ import { MatListModule } from '@angular/material/list';
         ScrollingModule,
         ScrollbarViewportComponent,
 
-        MatIconModule,
         MatButtonModule,
         MatCardModule,
+        MatDialogModule,
         MatExpansionModule,
-        MatDividerModule,
-        MatListModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatTooltipModule,
     ],
 })
 export class SharedModule { }

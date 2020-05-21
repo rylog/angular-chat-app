@@ -9,12 +9,14 @@ export class ChatService {
 
   messages: Subject<any>;
   senderId:string;
+  profileImage:string;
 
   constructor(private wsService: WebsocketService) {
     this.messages = <Subject<any>>this.wsService.connect()
     .pipe(map((response: any): any => {
       return response;
     }))
+
   }
 
   sendMsg(msg:string){

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChatService } from '../../services/chat/chat.service';
+import { ChatService } from '../../../services/chat/chat.service';
 import { Message } from 'src/app/shared/models/message';
 
 @Component({
@@ -24,5 +24,8 @@ export class ChatMessengerComponent {
     }
     this.messageInput = null;
   }
-
+  addFile(fileInput:Event){
+    const file = (<HTMLInputElement>fileInput.target).files[0];
+    const reader = new FileReader();
+  }
 }

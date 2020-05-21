@@ -1,5 +1,3 @@
-
-
 import { Socket } from "socket.io";
 import { MongoClient, MongoError } from "mongodb";
 

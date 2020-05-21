@@ -29,13 +29,9 @@
     border-radius: 8px;
     overflow: hidden;
 }
-chat-channels{
+chat{
+    flex: 1;
+    margin: 20px;
+    pointer-events: all;
     position: relative;
-    flex:1;
-
-}
-
-chat-messenger{
-    position: relative;
-    flex:3;
 }

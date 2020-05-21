@@ -1,11 +1,13 @@
 <div class="channels-container">
-  <div class="messenger-input-container">
-    <form class=messenger-input-form>
-        <mat-icon fontSet="material-icons-round">search</mat-icon>
-      <input class="messenger-input-text" autocomplete="off" type="text" name="messageInput" [(ngModel)]="messageInput"
+
+  <div class="channels-search-container">
+    <form class=channels-search-form>
+      <mat-icon fontSet="material-icons-round">search</mat-icon>
+      <input class="channels-search-text" autocomplete="off" type="text" name="messageInput" [(ngModel)]="messageInput"
         placeholder="Find a conversation">
     </form>
   </div>
+
   <div class="channels-list-container">
     <mat-expansion-panel class="mat-elevation-z0" [expanded]="true">
       <mat-expansion-panel-header [collapsedHeight]="'48px'" [expandedHeight]="'48px'">

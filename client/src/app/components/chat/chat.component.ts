@@ -7,18 +7,6 @@ import { CreateProfileModalComponent } from '../create-profile-modal/create-prof
   selector: 'chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss'],
-  animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate(400, style({ opacity: 1 }))
-      ]),
-      transition(':leave', [
-        animate(250, style({ opacity: 0 }))
-      ])
-    ])
-  ],
-  host: { '[@fadeInOut]': 'in' }
 })
 export class ChatComponent implements OnInit {
 

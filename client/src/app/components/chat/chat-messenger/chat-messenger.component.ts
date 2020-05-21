@@ -11,7 +11,7 @@ export class ChatMessengerComponent {
   messageInput: string;
   messages: Message[];
   
-  constructor(private chatService: ChatService) {
+  constructor(public chatService: ChatService) {
     this.messages = [];
     this.chatService.messages.subscribe(msg => {
       this.messages.push(msg);

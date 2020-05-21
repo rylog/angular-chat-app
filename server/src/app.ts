@@ -1,18 +1,19 @@
 import { Socket } from "socket.io";
-import { MongoClient, MongoError } from "mongodb";
+/* import { MongoClient, MongoError } from "mongodb"; */
 
 let app = require("express")();
 let http = require("http").Server(app);
 let io = require("socket.io")(http);
-const mongo = require('mongodb').MongoClient;
+const PORT = process.env.PORT || 3000
+/* const mongo = require('mongodb').MongoClient; */
 
-mongo.connect('mongodb://localhost:27017', { useUnifiedTopology: true }, (err: MongoError, db: MongoClient) => {
+/* mongo.connect('mongodb://localhost:27017', { useUnifiedTopology: true }, (err: MongoError, db: MongoClient) => {
     if (err) {
         throw err;
-    }
+    } */
 
     io.on('connection', (socket: Socket) => {
-        console.log("user connected");
+/*         console.log("user connected");
         const dbo = db.db('angular-chat');
         let chat = dbo.collection('chats');
         chat.find().limit(100).sort({ _id: 1 }).toArray((err, res) => {
@@ -20,7 +21,7 @@ mongo.connect('mongodb://localhost:27017', { useUnifiedTopology: true }, (err: M
                 throw err;
             }
             socket.emit('output', res);
-        });
+        }); */
 
         //Handle input events 
         socket.on('message', (message) => {
@@ -49,9 +50,9 @@ mongo.connect('mongodb://localhost:27017', { useUnifiedTopology: true }, (err: M
         // Handle clear
         socket.on('clear', (data) => {
             //Remove all chats from collection
-            chat.remove({}, () => {
+     /*        chat.remove({}, () => {
                 socket.emit('cleared');
-            })
+            }) */
         })
 
         socket.on("disconnect", () => {
@@ -60,10 +61,10 @@ mongo.connect('mongodb://localhost:27017', { useUnifiedTopology: true }, (err: M
     })
 
 
-})
+/* }) */
 
-// Initialize our websocket server on port 5000
-http.listen(3000, () => {
-    console.log("started on port 3000");
+// Initialize our websocket server on port 
+http.listen(PORT, () => {
+    console.log(`started on port ${PORT}`);
 });
 

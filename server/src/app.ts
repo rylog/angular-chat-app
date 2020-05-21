@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 3000
         }); */
 
         //Handle input events 
-        socket.on('message', (message) => {
+        socket.on('message', (message:any) => {
             console.log(message);
             let name = message.senderId;
             let content = message.content;

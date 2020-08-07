@@ -1,7 +1,7 @@
 # Angular Chat App
 This is a web app I created while learning the MEAN stack. It is a basic chat app that uses socket.io to send messages between users. 
 I was planning on adding MongoDB to create different channels and to save conversations. 
-Currently it is deployed on Heroku, here is the link [a link](https://mingler-client.herokuapp.com/)
+Currently it is deployed on Heroku, here is the link (https://mingler-client.herokuapp.com/)
 
 ## App Idea
 I wanted to create a chat app so my friends and I could send each other messages through any device that had access to internet.
